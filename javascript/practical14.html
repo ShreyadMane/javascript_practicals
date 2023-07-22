@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type='text/JavaScript'>
+        fyco = new Array('C Programming','Basic Electronics','M-1','M-2')
+        syco = new Array('C++','DBMS','Data Structure','Java');
+        tyco = new Array('Advanced Java','JavaScript','Python','Android');
+        function getSubject(yearselected)
+        {
+        for(i = document.f1.Subject.options.length-1 ; i>0 ; i--)
+        {
+        document.f1.Subject.options.remove(i);
+        }
+        classselected = yearselected.options[yearselected.selectedIndex].value;
+        if(classselected != "")
+        {
+        if(classselected == "1")
+        {
+        for(i=1;i<=fyco.length;i++)
+        {
+        document.f1.Subject.options[i] = new Option(fyco[i-1]);
+        }
+        }
+        if(classselected == "2")
+        {
+        for(i=1;i<=syco.length;i++)
+        {
+        document.f1.Subject.options[i] = new Option(syco[i-1]);
+        }
+        }
+        if(classselected == "3")
+        {
+        for(i=1;i<=tyco.length;i++)
+        {
+        document.f1.Subject.options[i] = new Option(tyco[i-1]);
+        }
+        }
+        }
+        }
+        </script>
+    </head>
+<body>
+    <center>
+        <h1>CSS : Practical No 14</h1>
+        <h2>Create a webpage for implementing Menus</h2>
+        <br><br>
+        <form name="f1">
+        <select name="Class" onchange="getSubject(this)">
+        <option value="0"> Class </option>
+        <option value="1"> First Year CO</option>
+        <option value="2"> Second Year CO</option>
+        <option value="3">Third Year CO</option>
+        </select>
+        <select name="Subject">
+        <option value="0"> Subject </option>
+        </select>
+        </form>
+        </center>
+</body>
+</html>

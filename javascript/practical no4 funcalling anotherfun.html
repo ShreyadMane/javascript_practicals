@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title> function calling another  function
+    </title>
+    <script>
+        function Logon()
+        {
+            var USERID;
+            var PASSWORD;
+            var valid;
+            USERID=prompt("enter user id",' ');
+            PASSWORD=prompt("enter password",' ');
+            valid=validatelogin(USERID,PASSWORD);
+            if(valid===true)
+            {
+                alert("valid login");
+    
+            }
+            else
+            {
+                alert("invalid login")
+            }
+        }
+        function validateLogon(id,pass)
+        {
+            var Returnvalue;
+            if(id==="122"&&pass==="aaa")
+            {
+                Returnvalue=true;
+    
+            }else{
+                Returnvalue=false;
+            }
+               return Returnvalue;
+        }
+       
+        </script>
+</head>
+<body>
+
+</body>
+
+</html>

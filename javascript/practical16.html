@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script type='text/JavaScript'>
+        Banners = new
+       Array('../facebook.jpg','../snapchat1.jpg','./google.png','./twitter.png','./linkedin.png');
+        count = 0;
+        BannerLink = new
+       Array('https://facebook.com/','https://snapchat.com/','https://google.com/','https://twitter.com/','
+       https://linkedin.com/');
+        function LinkBanner()
+        {
+        document.location.href= BannerLink[count];
+        }
+        function rotate()
+        {
+        if(document.images)
+        {
+        count++;
+        if(count == Banners.length)
+        {
+        count = 0;
+        }
+        document.img1.src = Banners[count];
+        setTimeout("rotate()",5000);
+        }
+        }
+        </script>
+ 
+</head>
+<body onload="rotate()" >
+    <center>
+        <h1>CSS : Practical No 16</h1>
+        <h2>Develop a webpage for implementing Slideshow, Banner</h2>
+        <br><br><br>
+        <a href="javascript: LinkBanner()">
+        <img src="../facebook1.jpg" width="300" height="300" name="img1"/>
+        </a><br><br>
+        <h4>Note : Images change automatically after every 5000 milli-seconds.</h4>
+        </center> 
+</body>
+</html>

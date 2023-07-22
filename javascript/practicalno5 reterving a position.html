@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>reterving a position</title>
+</head>
+<body onload="init()">
+    <script>
+        function init()
+        {
+            var str="how are you?";
+            var n1=str.search("0");
+            document.write("'0'   found at location  " +n1);
+            var n2=str.indexOf("u");
+            document.write("<br>'u'  found at location  " +n2);
+             var n3=str.search("are ");
+            document.write("<br>'are' found at location  " +n3);
+            var n4=str.indexOf("you");
+            document.write("<br>'you'  found at location  " +n4);
+
+        }
+    </script>
+</body>
+</html>

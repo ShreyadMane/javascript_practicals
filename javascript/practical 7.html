@@ -1,0 +1,43 @@
+<!DOCTYPE HTML> 
+  <html> 
+  <head> 
+    <title> Using the type Property</title> 
+   <style type="text/css"> 
+     p{font-family:Verdana;
+       background:#FA8B7C;
+       color:#fff;
+       padding:10px; border:4px solid #555;}
+   </style>
+
+  </head> 
+   <body> 
+ <p>
+  hiiiiii..........           
+  </p>
+ <p id="content">javacrript code.</p>
+     
+     
+<i>Hover over the text to see the effects.</i>
+    </body>
+    
+<script>
+   
+   var item = document.getElementsByTagName("p");
+   
+   for(var i=0; i < item.length; i++){
+    item[i].onmouseover = mouseEventHandler;
+    item[i].onmouseout = mouseEventHandler;
+    }
+   
+  function mouseEventHandler(e){
+    if(e.type == "mouseover"){
+      e.target.style.background = "#44c767";
+      e.target.style.fontStyle = "italic";
+    }
+    else {
+      e.target.style.removeProperty('font-style');
+      e.target.style.removeProperty('background');
+    }
+  }
+</script>
+</html>

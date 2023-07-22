@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>key event</title>
+</head>
+<body>
+    <div id="panel"></div>
+    <script>
+        var panel;
+        panel=document.getElementById("panel");
+        panel.innerHTML="press a key...";
+        document.addEventListener("keydown",keydown,false);
+        document.addEventListener("keyup",keyup,false);
+        document.addEventListener("keypress",keypress,false);
+        function keydown()
+        {
+            panel.innerHTML+="<br> key pressed:";
+
+        }
+        function keyup()
+        {
+            panel.innerHTML+="<br> key released :";
+
+        }
+           function keypress(e)
+           {
+               var keynum=(windo.event)?event.keycode:e.which;
+               panel.innerHTML+=String.fromCharCode(keynum);
+               
+          } </script>
+    
+</body>
+</html>

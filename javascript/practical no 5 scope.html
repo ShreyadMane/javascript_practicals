@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>scope</title>
+   
+</head>
+<body  onload="init()">
+    <script>
+        function init()
+        {
+            var str="How are you ?";
+            var res1=str.split();
+            document.write("<br> Result="+ res1);
+            var res2=str.split("0");
+            document.write("Result2=" + res2);
+            var res3=str=str.split(" ",2);
+            document.write("<br>Result3=" + res3);
+        }
+          
+
+        
+    </script>
+     
+</body>
+</html>

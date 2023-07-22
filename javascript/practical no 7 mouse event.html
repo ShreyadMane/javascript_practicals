@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+      <html> 
+        <head><title> Attach an Event Listener</title> 
+       </head> 
+    <body> 
+      <p id="content">hellooo....mouse event </p> 
+   </body> 
+   <script> 
+       var pElem = document.getElementById("content"); 
+     
+     pElem.addEventListener('click',styleIT, false); 
+       function styleIT(){ 
+       this.style.background ="#FA8B7C"; 
+       this.style.fontFamily ="Verdana"; 
+       this.style.padding ="10px";
+       this.style.color ="#fff";
+       this.style.border ="4px solid #444";
+                        } 
+      </script> 
+</html>

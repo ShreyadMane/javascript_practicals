@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>cookie third </title>
+</head>
+<body>
+    <script>
+        document.Cookie="username=shreya dinkar mane";expires="thu,28 Nov 2021 12:00:00 GMT";
+        if(document.Cookie)
+        {
+          document.write("Created Cookie is:"+document.Cookie);
+          cookieString=document.Cookie
+          var list=cookieString.split("=")
+          document.write("<br>Split List:" +list);
+          if(list[0]=="username")
+          {
+              var data=list[1].split(",");
+              document.write("<br>Data:" +data);
+          }
+
+        }
+    </script>
+</body>
+</html>

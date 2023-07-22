@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>mouse event two</title>
+</head>
+<body>
+    <script>
+        var panel,flag;
+        panel=document.getElementById("panel");
+        flag=true;
+
+        panel.innerHTML="Move the mouse...";
+        document.onmousemove=mousemove;
+        panel.onmouseover=mouseover;
+        panel.onmouseout=mouseout;
+        var panel,flag;
+        
+        function mousemove(e)
+        {
+            if(flag)
+            {
+                panel.innerHTML="mouse is at x:"+ e.x+",y:"+e.y;
+
+            }
+        }
+        function mouseover()
+        {
+            flag=false;
+            panel.innerHTML="mouse is over";
+
+        }
+        function mouseout()
+        {
+            flag=true;
+        }
+    </script>
+</body>
+</html>

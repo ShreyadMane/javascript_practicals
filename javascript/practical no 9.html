@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>intrinsic function ex one</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function ToggleDisabled();{
+        var text=document.getElementById("mytext");
+        if('disabled' in text){
+            text.disabled=!text.disabled;
+
+        }
+    }
+
+    </script>
+    <input type="text" id="mytext" disabled='disabled' value="Disabled value"/>
+    <button onclick="ToggleDisabled();">change state</button>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>cookies first</title>
+</head>
+
+<body>
+<form name="myform" action="">
+    Enter your name:<input type="text" name="person"/><br>
+    <input name="Reset" value="Set Cookie" type="button" onclick="writeCookie()"/>
+    <input name="Reset" value="getCookie" type="button" onclick="readCookie()"/>
+    
+
+</form>
+   <script>
+     function writeCookie()
+     {
+         with (document.myform)
+         {
+             document.Cookie="Name=" +person.value+";"
+             alert("Cookie wrotten")
+         }
+     }
+     function readCookie()
+     {
+         var x;
+         if(document.Cookie=="")
+         x="";
+         else
+         x=document.Cookie;
+         document.write(x);
+
+     }
+   </script> 
+</body>
+</html>
